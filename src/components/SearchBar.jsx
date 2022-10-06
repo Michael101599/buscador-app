@@ -22,8 +22,6 @@ export default function SearchBar({items, onItemSelected}){
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
 
-
-
     let handleChange = (e) => {
         const value = e.target.value;
         setQuery(value);
