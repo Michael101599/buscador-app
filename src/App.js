@@ -94,9 +94,9 @@ function App() {
 
 
   let handleClick = (e) => {
-    const op = e.target.name;
+    const options = e.target.name;
 
-    switch(op){
+    switch(options){
       case 'all':
         setData([...people, ...calendar, ...emails]);
         setCurrentOption('all');
@@ -124,15 +124,25 @@ function App() {
   }
 
   return (
-    <div>
-      <Button onClick={handleClick} name='all' >All</Button>
-      <Button onClick={handleClick} name='people' >People</Button>
-      <Button onClick={handleClick} name='calendar' >Calendar</Button>
-      <Button onClick={handleClick} name='emails' >Emails</Button>
-      <Button onClick={() => setCount(count + 1)} >{count}</Button>
+    // <div class='text-center' >
+    //   <Button type="button" class="btn btn-primary" data-bs-toggle="button" onClick={handleClick} name='all' >All</Button>
+    //   <Button onClick={handleClick} name='people' >People</Button>
+    //   <Button onClick={handleClick} name='calendar' >Calendar</Button>
+    //   <Button onClick={handleClick} name='emails' >Emails</Button>
+    //   <Button onClick={() => setCount(count + 1)} >{count}</Button>
+    //   {selection ? <div>You selected: {selection.title} </div> : ''}
+    //   <SearchBar items={data} onItemSelected={handleItemSelected} />
+    // </div>
+    <div class='text-center' >
+      <button type="button" class="btn btn-primary" onClick={handleClick} name='all' >All</button>
+      <button type="button" class="btn btn-primary" onClick={handleClick} name='people' >People</button>
+      <button type="button" class="btn btn-primary" onClick={handleClick} name='calendar' >Calendar</button>
+      <button type="button" class="btn btn-primary" onClick={handleClick} name='emails' >Emails</button>
+      <button type="button" class="btn btn-primary" onClick={() => setCount(count + 1)} >{count}</button>
       {selection ? <div>You selected: {selection.title} </div> : ''}
       <SearchBar items={data} onItemSelected={handleItemSelected} />
     </div>
+    
   );
 }
 
