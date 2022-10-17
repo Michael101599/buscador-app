@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import SearchBar from './components/SearchBar';
 
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
-const Button = styled.button`
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: white;
-  border: solid 1px #ccc;
-  cursor: pointer;
+// const Button = styled.button`
+//   padding: 10px;
+//   border-radius: 5px;
+//   border: none;
+//   background-color: white;
+//   border: solid 1px #ccc;
+//   cursor: pointer;
 
-  &:hover{
-    background-color: #efefef;
-  }
-`;
+//   &:hover{
+//     background-color: #efefef;
+//   }`;
 
 const people = [
   {
